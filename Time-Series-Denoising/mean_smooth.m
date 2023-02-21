@@ -42,7 +42,7 @@ zoom on
 
 % filtered signal vector
 
-filtsig = ones(size(signal)); % or filtsig = signal (hint: edge effects)
+filtsig = zeros(size(signal)); % or filtsig = signal (hint: edge effects)
 
 % implement the mean-smooth in the *time* domain
 
