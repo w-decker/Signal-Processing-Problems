@@ -1,8 +1,8 @@
-%% Time Series Denoising
+%% Mean-smooth filter of time series data
 % Author: Will Decker
 % Code adapted from Mike X. Cohen's "Signal Processing Problems" course
 
-%% Section 1: Mean-smooth time series
+%% 
 
 % signal parameters
 
@@ -20,7 +20,7 @@ noise = noiselevel * randn(size(time)); % randomly generate noise along signal
 
 ampl = interp1(randn(p,1)*25, linspace(1,p,n));
 
-% generate signal
+%% generate signal
 
 signal = ampl + noise;
 
@@ -36,9 +36,11 @@ figure(2), clf, hold on
 plot(time, signal, time, ampl, 'linew', 2)
 zoom on
 
+%% Filter signal
+
 % filtered signal vector
 
-filtsig = ones(size(signal)); % or filtsig = signal
+filtsig = ones(size(signal)); % or filtsig = signal (hint: edge effects)
 
 % implement the mean-smooth in the *time* domain
 
@@ -54,7 +56,7 @@ end
 
 windowsize = 1000 * (k*2 + 1) / samplerate;
 
-% plot noisy and filtered signal
+%% Plot noisy and filtered signal
 
 figure(3), clf, hold on
 plot(time, signal, time, filtsig, 'linew', 2)
