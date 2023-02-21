@@ -24,13 +24,15 @@ ampl = interp1(randn(p,1)*25, linspace(1,p,n));
 
 signal = ampl + noise;
 
+% show signals adjacent
+
 figure(1), clf, hold on
 subplot(221)
 plot(time, ampl, 'Color', [0.6, 0 ,0]), title('raw signal without noise')
 subplot(222)
 plot(signal) , title('raw signal with added noise')
 
-% show signals superimposed on eachother 
+% show signals superimposed
 
 figure(2), clf, hold on
 plot(time, signal, time, ampl, 'linew', 2)
