@@ -24,7 +24,7 @@ signal(noisepoints) = 50+rand(size(noisepoints))*100;
 
 % plot
 
-plot(signal, 's-')
+plot(signal, 'o-')
 
 %% Visually inspect data
 
