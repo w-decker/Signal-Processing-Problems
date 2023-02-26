@@ -1,4 +1,4 @@
-%% Linear detrending
+%% Non-linear detrending
 % Author: Will Decker
 % Code adapted from Mike X. Cohen's "Signal Processing Problems" course
 
